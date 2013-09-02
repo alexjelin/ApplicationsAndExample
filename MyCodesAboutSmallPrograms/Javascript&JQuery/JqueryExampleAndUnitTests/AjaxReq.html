@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        var httpReq = new XMLHttpRequest();
+
+        if (window.XMLHttpRequest) {
+            httpRequest = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            try {
+                httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+            }
+            catch (e) {
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+        }
+
+        httpReq.onreadystatechange = function () {
+            if (httpReq.readyState == 4) {
+                if(httpReq.status==200{
+                    document.write("request is done");
+                }
+                else{
+                    document.write("request is invalid");
+                }
+            }
+        }
+
+        httpRequest.open("GET", "scripts/data.js", true);
+        httpRequest.setRequestHeader("Content-type",  
+                                       "application/json");
+        httpRequest.send(null);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Slider Example</title>
+    <style>
+        #changeToImg1 {
+            height: 24px;
+            width: 24px;
+            border: none;
+            -webkit-border-radius: 20px;
+            border-radius: 20px;
+            background: rgb(69,72,77);
+            background: -moz-linear-gradient(top, rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1)));
+            background: -webkit-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+            background: -o-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+            background: -ms-linear-gradient(top, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+            background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+
+        }
+    </style>
+</head>
+<body>
+    <div id="frame"></div>
+    <button id="changeToImg1"></button>
+    <button id="changeToImg2"></button>
+    <button id="changeToImg3"></button>
+    <button id="changeToImg4"></button>
+    <button id="changeToPreveous"></button>
+    <button id="changeToNext"></button>
+    <div>Created by Alexandar Zhelin</div>
+</body>
+</html>

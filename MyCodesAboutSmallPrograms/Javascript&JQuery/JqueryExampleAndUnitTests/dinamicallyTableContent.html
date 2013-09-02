@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<!-- elementite na tablicata se dobavqt ot potribitelq dinamichno -->
+<!--By given an array of students, generate a table that represents these students
+Each student has first name,last name and grade
+Use jQuery
+-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dinamichna tablica</title>
+    <style>
+        #table {
+            background-color:lightpink;
+            border:2px solid black;
+            border-radius:9px;
+            position:relative;
+            top:100px;
+            right:-300px;
+            width:651px;
+        }
+        th {
+            border:1px solid black;
+        }
+        tr {
+            border:1px solid black;
+        }
+        td {
+            border:1px solid black;
+        }
+        #btnDiv {
+            position:relative;
+            right:-120px;
+        }
+        #exit {
+            width:150px;
+        }
+    </style>
+    <script src="jquery-1.10.2.js"></script>
+    <script>
+        function printStudent(){
+
+            var Student=({
+                init:function (fname,lname,grade){
+                    var self=this;
+                    self.fname=fname;
+                    self.lname=lname;
+                    self.grade=grade;
+                },
+                getFname:function(){
+                    return this.fname;
+                },
+                getLname:function(){
+                    return this.lname;
+                },
+                getGrade:function(){
+                    return this.grade;
+                }
+            });  
+            var fname=$("#fname").val();
+            var lname=$("#lname").val();
+            var grade=$("#grade").val();
+
+            if(!Object.create){
+                Object.create = function(obj){
+                    function f(){};
+                    f.prototype = obj;
+                    return new f();    
+                }
+            }
+
+            var newStudent=Object.create(Student);
+            newStudent.init(fname,lname,grade);
+
+            var newTr=document.createElement("tr");
+            var newTd=document.createElement("td");
+            var newTd1=document.createElement("td");
+            var newTd2=document.createElement("td");
+            var table=document.getElementById("table");
+
+            newTd.textContent=newStudent.fname.toString();
+            newTd1.textContent=newStudent.lname.toString();
+            newTd2.textContent=newStudent.grade.toString();
+
+            newTr.appendChild(newTd);
+            newTr.appendChild(newTd1);
+            newTr.appendChild(newTd2);
+
+            table.appendChild(newTr);
+            alert("Записът е добавен успешно в таблицата!");
+        }
+
+        function clearAll() {
+            var fname = $("#fname");
+            var lname = $("#lname");
+            var grade = $("#grade");
+
+            $("#fname").val("");
+            $("#lname").val("");
+            $("#grade").val("");
+
+        }
+
+        $(document).ready(function () {
+            $("#exit").on("click", clearAll);
+        });
+
+        $(document).ready(function(){
+            $("#btn").on("click",printStudent);
+        });
+    </script>
+</head>
+<body>
+    <div>Insert your first name,last name and grade by exam in text fields:</div>
+    <br />
+    <span><input type="type" value="" id="fname" /></span>
+    <span><input type="type" value="" id="lname" /></span>
+    <span><input type="type" value="" id="grade" /></span>
+    <div id="btnDiv">
+    <button id="btn">Save your info in table!</button>
+        <button id="exit">Exit</button>
+    </div>
+    <table id="table">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Grade of student</th>
+        </tr>
+    </table>
+   
+</body>
+</html>

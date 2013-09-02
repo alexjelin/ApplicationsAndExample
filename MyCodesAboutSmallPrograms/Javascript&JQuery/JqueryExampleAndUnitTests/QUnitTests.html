@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="qunit-1.12.0.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="qunit-1.12.0.js"></script>
+    <script>
+        function sum(a, b) {
+            var sum = a + b;
+            return sum;
+        }
+
+        function multiplication(a, b) {
+            var multi = a * b;
+            return multi;
+        }
+
+        function printResult(text) {
+            var result = text;
+            return result;
+        }
+
+        test("The string is" + printResult(),
+            function () {
+                ok(printResult("kak e") === "kak e", "the string is not equal!");
+            });
+
+        test("Your function is working if : ",
+         function () {
+             ok(sum(2, 3) === 5, "return 5");
+         });
+
+        test("Function is work!",function(){
+            ok(multiplication(5, 8) === 40, "multiplication is equal of 40");
+        });
+
+        test("function is finish",function(){
+            QUnit.log(printResult("daa"));
+        });
+
+    </script>
+</body>
+</html>
