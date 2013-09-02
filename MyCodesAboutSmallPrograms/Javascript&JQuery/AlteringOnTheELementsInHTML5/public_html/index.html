@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function addEl()
+            {
+                var dFrag = document.createDocumentFragment();
+                var ul = document.getElementById("ul")
+                var newLi = document.createElement("li");
+                newLi.textContent = "Item {0}".format("Next");
+                ul.appendChild(newLi);
+                var newH1 = document.createElement("h1");
+                var newH2 = document.createElement("h2");
+                var newH3 = document.createElement("h3");
+                newH1.textContent = "This is h1 content";
+                newH2.textContent = "This is h2 content";
+                newH3.textContent = "This is h3 content";
+                newLi.appendChild(newH1);
+                newLi.appendChild(newH2);
+                newLi.appendChild(newH3);
+            }
+
+            if (!String.prototype.format) {
+                String.prototype.format = function() {
+                    var args = arguments;
+                    return this.replace(/{(\d+)}/g, function(match, number) {
+                        return typeof args[number] != 'undefined'
+                                ? args[number]
+                                : match
+                                ;
+                    });
+                };
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="ul">
+            <!-- here it will be add li elements with JS!-->
+        </ul>
+
+        <button onclick="addEl()">Click</button>
+    </body>
+</html>

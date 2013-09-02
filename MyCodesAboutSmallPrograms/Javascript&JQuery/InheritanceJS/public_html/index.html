@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function Person(fname, lname, age)
+            {
+                var self = this;
+                self.setFirstName = function() {
+                    if (fname != null) {
+                        self.fname = fname;
+                    }
+                }
+                self.setLastName = function() {
+                    if (lname != null) {
+                        self.lname = lname;
+                    }
+                }
+                self.setAge = function() {
+                    if (age != null) {
+                        self.age = age;
+                    }
+                }
+                self.getFname = function()
+                {
+                    return self.fname;
+                }
+                self.getLname = function()
+                {
+                    return self.lname;
+                }
+                self.getAge = function()
+                {
+                    return self.age;
+                }
+            }
+            Person.prototype.printResult = function()
+            {
+                console.log(getFname() + getAge() + getLname());
+            }
+
+            // method about inheritance!
+            Function.prototype.inherit = function(parent) {
+                this.prototype = new parent();
+                this.prototype.constructor = parent;
+            }
+
+            function Worker(name, age, town) {
+                Person.apply(this, arguments);
+                this.town = town;
+            }
+
+            Worker.inherit(Person);
+            // function about extends;
+            Function.prototype.extend = function(parent) {
+                for (var i = 1; i < arguments.length; i += 1) {
+                    var name = arguments[i];
+                    this.prototype[name] = parent.prototype[name];
+                }
+                return this;
+            }
+           
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

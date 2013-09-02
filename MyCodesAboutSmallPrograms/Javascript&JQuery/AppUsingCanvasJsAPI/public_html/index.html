@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>This application use canvas !</div>
+        <canvas id="canvasAPI" height="150" width="150">
+            Canvas API don't load at the moment.Sorry!This is like come alt tang in
+            img-html 5. 
+        </canvas>
+        <!--always must script tag set after canvas tag-->
+        <script>
+            var canvas = document.getElementById("canvasAPI");
+            var context = canvas.getContext("2d");
+            // draw the rectangle;
+            var gradient = context.createLinearGradient(0, 0, 300, 0);
+            gradient.addColorStop(0, "blue");
+            gradient.addColorStop(1, "green");
+            gradient.fillStyle = grd;
+            context.fillRect(0, 0, 150, 75);
+            // write a text;
+            context.font = "15px Arial";
+            context.fillText("Kak e", 60, 70);
+            context.strokeText("Hello World", 10, 50);
+
+        </script>
+    </body>
+</html>

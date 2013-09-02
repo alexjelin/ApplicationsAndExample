@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function oop() {
+                // Classicla way to create object in JS
+                var name = document.getElementById("name").value;
+                var age = document.getElementById("age").value;
+                var town = document.getElementById("town").value;
+
+                function Person(name, age, town)
+                {
+                    var self = this;
+                    self.name = name;
+                    self.age = age;
+                    self.town = town;
+                    self.toSayData = function()
+                    {
+                        console.log(self.name + " " + self.age + " " + self.town + "\n");
+                    }
+                }
+                var student = new Person(name, age, town);
+                student.toSayData();
+
+                function Car(brand, model) {
+                    this.brand = brand;
+                    this.model = model;
+                    this.PrintModel = function() {
+                        console.log(this.brand + " " + this.model);
+                    }
+                }
+                var bmw = new Car("BMW", 750);
+                bmw.PrintModel();
+            }
+
+            function Worker(name, age, city)
+            {
+                var self = this;
+                self.name = name;
+                self.age = age;
+                // gettyr
+                self.getName = function() {
+                    return self.name;
+                }
+                //settar
+                if (city != null) {
+                    self.city = city;
+                }
+            }
+            // fast method to attach function to object;
+            Worker.prototype.sayNewData = function()
+            {
+                console.log(self.name + " " + self.age + " \n");
+            }
+            var pesho = new Worker("Pesho", 15);
+            pesho.sayNewData();
+            var getName = pesho.getName();
+            console.log(getName);
+
+        </script>
+    </head>
+    <body>
+        <span>Please insert your name,age and city where you live at the moment</span>
+        <input type="text" id="name" value=""/>
+        <input type="text"  id="age" value=""/>
+        <input type="text"   id="town" value=""/>
+        <button onclick="oop()">Click to save!</button>
+    </body>
+</html>

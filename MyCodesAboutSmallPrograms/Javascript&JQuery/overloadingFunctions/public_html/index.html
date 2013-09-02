@@ -1,0 +1,38 @@
+<!--
+Write a function that groups an array of persons by age, 
+first or last name. The function must return an associative array,
+with keys - the groups, and values -arrays with persons 
+in this groups.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var persons =
+                    [
+                        {firstname: "Gosho", lastname: "Petrov", age: 32},
+                        {firstname: "Shosho", lastname: "Stoqnov", age: 33},
+                        {firstname: "Kristiqn", lastname: "Petrov", age: 34},
+                        {firstname: "Ivan", lastname: "Ivanov", age: 22},
+                        {firstname: "Pepi", lastname: "Nikolova", age: 48},
+                        {firstname: "Denica", lastname: "Baleva", age: 42},
+                        {firstname: "Stoqn", lastname: "Qnev", age: 30}
+                    ]
+            function group(array, property)
+            {
+                var newArray = new Array(array.lenght);
+                for (var i = 0; i < array.length; i++)
+                    for (var k = 0; k < newArray.length; k++) {
+                        newArray[k] = array[i].property;
+                    }
+                return newArray;
+            }
+            var gropuByName = group(persons, "firstname");
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!--
+Write a program that finds the index of given element
+in a sorted array of integers by using the linear search algorithm.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var array = new Array(1, 1, 2, 55, 88, 997, 5, 2, 34, 6, 7, 8, 9, 5, 4, 7, 6);
+
+            function linearSearch(array, element)
+            {
+                for (var i = 0; i < array.length; i++)
+                {
+                    if (element == array[i])
+                    {
+                        console.log("Elementyt e otkrit v index " + i);
+                    }
+                    else {
+                        console.log("Elementyt ne e nameren!");
+                    }
+                }
+            }
+            //test for out method
+            linearSearch(array, 997);
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

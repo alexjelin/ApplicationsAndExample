@@ -1,0 +1,38 @@
+<!--
+Write a function that finds the youngest
+person in a given array of persons and prints his/hers full name.
+Each person have properties firstname, lastname and age, as shown.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function findTheSmallestAge() {
+                var persons =
+                        [
+                            {firstname: "Gosho", lastname: "Petrov", age: 32},
+                            {firstname: "Shosho", lastname: "Stoqnov", age: 33},
+                            {firstname: "Kristiqn", lastname: "Petrov", age: 34},
+                            {firstname: "Ivan", lastname: "Ivanov", age: 22},
+                            {firstname: "Pepi", lastname: "Nikolova", age: 48},
+                            {firstname: "Denica", lastname: "Baleva", age: 42},
+                            {firstname: "Stoqn", lastname: "Qnev", age: 30}
+                        ]
+                var youngestPerson = persons[0];
+                for (var i = 1; i < persons.length; i++)
+                {
+                    if (persons[i].age > persons[i - 1].age)
+                    {
+                        youngestPerson = persons[i];
+                    }
+                }
+                console.log("Chovekyt s nai malka vazrast e :" + youngestPerson.firstname + " " +
+                        youngestPerson.lastname + " " + youngestPerson.age);
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

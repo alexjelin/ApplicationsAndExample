@@ -1,0 +1,112 @@
+<!--
+Implement a repository to keep students and teachers in schools
+Each school have a name, town and classes of students
+Students have firstname, last name, age and grade
+Teachers have firstname, last name, age and speciality
+Students and Teachers can introduce themselves by printing all their 
+non-function properties in the format PropertyName: PropertyValue
+Student introducement - Name: Peter Ivanov, Age: 13, grade: 7
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            // Classical OOP way
+            function School(name, town, classes) {
+                var self = this;
+                this.name = name;
+                this.town = town;
+                this.classes = classes;
+                this.printData = function() {
+                    console.log(this.name + this.town + this.classes);
+                }
+                function Student(fname, lname, age, grade) {
+                    var self = this;
+                    self.fname = fname;
+                    self.lname = lname;
+                    self.age = age;
+                    self.grade = grade;
+                    self.printInfo = function() {
+                        console.log("Name" + self.fname + " " + self.lname + "Age:" + self.age + "\n" + "Grade:" + self.grade);
+                    }
+                }
+                function Teacher(fname, lname, age, speciality) {
+                    var self = this;
+                    self.fname = fname;
+                    self.lname = lname;
+                    self.age = age;
+                    self.speciality = speciality;
+                }
+            }
+
+            if (!Object.create) {
+                Object.create = function(obj) {
+                    function f() {
+                    }
+                    ;
+                    f.prototype = obj;
+                    return new f();
+                }
+            }
+
+            var Classcreate = function(properties) {
+                var theClass = function() {
+                    this.init.apply(this, arguments);
+                }
+                theClass.prototype = {};
+                for (var prop in properties) {
+                    theClass.prototype[prop] = properties[prop];
+                }
+                if (!theClass.prototype.init) {
+                    theClass.prototype.init = function() {
+                    }
+                }
+                return theClass;
+            }
+
+            // prototype OOP way
+            var School = Classcreate({
+                init: function(name, town, classes)
+                {
+                    var self = this;
+                    self.name = name;
+                    self.town = town;
+                    self.classes = classes;
+                },
+                getName: function() {
+                    return this.name;
+                },
+                getTown: function() {
+                    return this.town;
+                },
+                getClasses: function() {
+                    return this.classes;
+                }
+            })
+            var Student = Classcreate({
+                init: function(name, town, grade)
+                {
+                    var self = this;
+                    self.name = name;
+                    self.town = town;
+                    self.grade = classes;
+                },
+                getName: function() {
+                    return this.name;
+                },
+                getTown: function() {
+                    return this.town;
+                },
+                getGrade: function() {
+                    return this.grade;
+                }
+            })
+            var pesho = Object.create(Student);
+            pesho.init("Pesho", "Varna", 6);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

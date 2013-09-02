@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            // method for easyest way to create object;
+            var Classcreate = function(properties) {
+                var theClass = function() {
+                    this.init.apply(this, arguments);
+                }
+                theClass.prototype = {};
+                for (var prop in properties) {
+                    theClass.prototype[prop] = properties[prop];
+                }
+                if (!theClass.prototype.init) {
+                    theClass.prototype.init = function() {
+                    }
+                }
+                return theClass;
+            }
+            // example..
+            var car = Classcreate({
+                init: function(brand, model) {
+                    this.brand = brand;
+                    this.model = model;
+                }
+            });
+
+            Function.prototype.inherit = function(parent) {
+                var oldPrototype = this.prototype;
+                var prototype = new parent();
+                this.prototype = Object.create(prototype);
+                this.prototype._super = prototype;
+                for (var prop in oldPrototype) {
+                    this.prototype[prop] = oldPrototype[prop];
+                }
+            }
+
+            var mercedes = Classcreate({
+                init: function(brand, model, year) {
+                    car.apply(this, arguments);
+                    this.year = year;
+                }
+            });
+
+            mercedes.inherit(car);
+
+            if (!(Object.create()))
+            {
+                Object.create = function(obj)
+                {
+                    function f() {
+                    }
+                    ;
+                    f.prototype = obj;
+                    return new f();
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

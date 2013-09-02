@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function changeText(){
+            var li1=document.getElementById("item1");
+            li1.innerHTML="Change Li from Item1"; 
+            
+            var li2=document.getElementById("item2");
+            li2.outerHTML="Change Li from Item2";      
+            
+            var li3=document.getElementById("item3");
+            li3.innerText="Change Li from Item3";      
+            }
+        </script>
+    </head>
+    <body>
+        <div>This is example for DOM manipolation!</div>
+        <ul>
+            <li id="item1">Item 1</li>
+            <li id="item2">Item 2</li>
+            <li id="item3">Item 3</li>
+            <li id="item4">Item 4</li>           
+        </ul>
+        <button onclick="changeText()">Change content of Li Tags</button>
+    </body>
+</html>

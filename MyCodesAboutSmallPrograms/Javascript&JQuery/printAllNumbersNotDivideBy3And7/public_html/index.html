@@ -1,0 +1,29 @@
+<!--
+Write a script that
+prints all the numbers from 1 to N, that are not divisible by 
+3 and 7 at the same time.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function printNumberInTheInterval() {
+                var num = parseInt(document.getElementById("number").value);
+                for (var k = 1; k <= num; k++)
+                {
+                    if (k % 3 == 0 && k % 7 == 0) {
+                        document.write(" " + k);
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>Enter the number:</div>
+        <input type="text" id="number" value="" />
+        <input type="button" id="button" value="Click me!" onclick="printNumberInTheInterval()" />
+    </body>
+</html>

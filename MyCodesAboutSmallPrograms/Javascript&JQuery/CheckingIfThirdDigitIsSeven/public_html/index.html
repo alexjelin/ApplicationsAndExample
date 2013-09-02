@@ -1,0 +1,26 @@
+<!--
+Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732  true.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var number = 1732;
+            var digitOfNumber = 0;
+            var divideNumber=0;
+            divideNumber=number/100;
+            digitOfNumber=parseInt(divideNumber%10);
+            if (digitOfNumber == 7)
+            {
+                alert("Your number contains 7!");
+            }
+            else {
+                alert("Your Number not contains 7");
+            }
+        </script>     
+    </head>
+    <body>
+    </body>
+</html>

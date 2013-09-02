@@ -1,0 +1,29 @@
+<!--
+Write a script that compares two char arrays lexicographically (letter by letter).
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var stringArray1 = new Array("Zdraveite");
+            var stringArray2 = new Array("NeshtoDrugo");
+            for (var i = 0; i < stringArray1.lenght; i++)
+                for (var k = 0; k < stringArray2.lenght; k++)
+                {
+                    if (stringArray1[i] != stringArray2[k])
+                    {
+                        console.log("Stringovete ne sa ravni!");
+                        break;
+                    }
+                    else
+                    {
+                        console.log("Stringovete sa ednakvi!");
+                    }
+                }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

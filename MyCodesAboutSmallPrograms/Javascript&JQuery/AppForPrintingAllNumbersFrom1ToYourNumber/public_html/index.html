@@ -1,0 +1,25 @@
+<!--
+Write a script that prints all the numbers from 1 to N.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function printNumberInTheInterval() {
+                var num = parseInt(document.getElementById("number").value);
+                for (var k = 1; k <= num; k++)
+                {
+                    document.write(" " + k);
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>Enter the number:</div>
+        <input type="text" id="number" value="" />
+        <input type="button" id="button" value="Click me!" onclick="printNumberInTheInterval()" />
+    </body>
+</html>

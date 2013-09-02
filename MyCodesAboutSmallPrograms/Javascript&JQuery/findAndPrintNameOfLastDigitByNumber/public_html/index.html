@@ -1,0 +1,60 @@
+<!--
+Write a function that returns the last digit of given integer as an 
+English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function difineLastDigit()
+            {
+                var number = parseInt(document.getElementById("textBox").value);
+                var lastDigit = number % 10;
+                switch (lastDigit)
+                {
+                    case 1:
+                        document.write("one");
+                        break;
+                    case 2:
+                        document.write("two");
+                        break;
+                    case 3:
+                        document.write("three");
+                        break;
+                    case 4:
+                        document.write("four");
+                        break;
+                    case 5:
+                        document.write("five");
+                        break;
+                    case 6:
+                        document.write("six");
+                        break;
+                    case 7:
+                        document.write("seven");
+                        break;
+                    case 8:
+                        document.write("eight");
+                        break;
+                    case 9:
+                        document.write("nine");
+                        break;
+                    case 0:
+                        document.write("zero");
+                        break;
+                    default:
+                        document.write("error!");
+                        break;
+                }
+            }
+
+        </script>
+    </head>   
+    <body>
+        <div>Please insert number in text box:</div>
+        <input type="text" value="Enter your text here!" id="textBox" />
+        <input type="button" value="Click me" id="buttonForAction" onclick="difineLastDigit()"/>     
+    </body>
+</html>

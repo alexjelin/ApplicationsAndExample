@@ -1,0 +1,28 @@
+<!--
+Write a function that removes all elements with a given value.
+Attach it to the array class.
+Read about prototype and how to attach methods.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            Array.prototype.remove = function removeElementInArray(index, array) {
+                var newArray = new Array(array.lenght);
+                for (var i = 0; i < newArray.length; i++)
+                {
+                    if (i == index)
+                    {
+                        continue;
+                    }
+                    newArray[i] = array[i];
+                }
+                return newArray;
+            };
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

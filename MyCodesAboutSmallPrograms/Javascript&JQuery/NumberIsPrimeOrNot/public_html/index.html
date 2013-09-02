@@ -1,0 +1,28 @@
+<!--
+Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            var number = 37;
+            for (var i = 2; i <= number; i++)
+            {
+                if (i != number && number % i == 0) {
+                    document.write("Chisloto e systavno");
+                    break;
+                }
+                if (i == number && number % i == 0)
+                {
+                    document.writeln("Chisloto e prosto");
+                    break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

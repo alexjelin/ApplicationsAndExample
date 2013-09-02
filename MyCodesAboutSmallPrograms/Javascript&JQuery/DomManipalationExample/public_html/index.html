@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function querySelector() {
+                var divs = document.querySelectorAll("div");
+                var ps = document.querySelectorAll("p");
+                var spans = document.querySelectorAll("span");
+                for (var i = 0; i < divs.length; i++)
+                {
+                    divs[i].innerHTML = "new Text from Div";
+                }
+                for (var i = 0; i < ps.length; i++)
+                {
+                    ps[i].innerHTML = "new Text from P";
+                }
+                for (var i = 0; i < spans.length; i++)
+                {
+                    spans[i].innerHTML = "new Text from Span";
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <div>This is div 1!</div>
+        <div>This is div 2!</div>
+        <div>This is div 3!</div>
+        <div>This is div 4!</div>
+        <p>This is p 1</p>
+        <p>This is p 2</p>
+        <p>This is p 3</p>
+        <p>This is p 4</p>
+        <span>
+            This is span 1
+        </span>
+        <span>
+            This is span 2
+        </span>
+        <span>
+            This is span 3  
+        </span>
+        <button onclick="querySelector()">Click me!</button>
+    </body>
+</html>

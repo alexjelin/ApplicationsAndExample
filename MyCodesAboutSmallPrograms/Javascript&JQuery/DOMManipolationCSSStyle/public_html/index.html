@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function changeCSS()
+            {
+                var div=document.getElementById("divEl");
+                div.style.border="1px solid black";
+                div.style.color="red";
+                div.style.background="blue";
+                div.style.height="66px";
+                          
+            }
+        </script>
+    </head>
+    <body>
+        <div id="divEl">This is same text!</div>
+        <input type="button" value="Click me!" onclick="changeCSS()"/>
+    </body>
+</html>

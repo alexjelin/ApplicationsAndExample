@@ -1,0 +1,31 @@
+<!--
+Write a function that counts
+how many times given number appears in given array. 
+Write a test function to check if the function is working correctly.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function counterForElementInArray() {
+                var newArray = new Array(1, 2, 2, 3, 3, 3, 4, 5, 666, 98, 4, 5, 2);
+                var searchElement = 2;
+                var counter = 0;
+                for (var i = 0; i < newArray.length; i++)
+                {
+                    if (searchElement == newArray[i])
+                    {
+                        counter++;
+                    }
+                }
+                console.log("Elementyt" + searchElement + "se sreshta " + counter + "pati v masiva!");
+            }
+            // call to function;
+            counterForElementInArray();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

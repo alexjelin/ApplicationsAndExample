@@ -1,0 +1,51 @@
+<!--
+Write functions for working with shapes in  standard Planar coordinate system
+Points are represented by coordinates P(X, Y)
+Lines are represented by two points, marking their beginning and ending
+L(P1(X1,Y1),P2(X2,Y2)).
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript">
+            function planarCordtinates(x, y)
+            {
+                return
+                {
+                    X:x;
+                    Y:y;
+                    toString:function printCordinates() {
+                        console.log(x + " " + y);
+                    }
+                    ;
+                }
+            }
+
+            var p1 = planarCordtinates(5, 8);
+            var p2 = planarCordtinates(6, 9);
+
+            function linesModel(p1, p2)
+            {
+                return
+                {
+                    P1:{
+                        p1.x, p2.y
+                    }
+                    ;
+                    P2:{
+                        p2.x, p.y
+                    }
+                    ;
+                    toString:function printCordinates() {
+                        console.log(P1 + " " + P2);
+                    }
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

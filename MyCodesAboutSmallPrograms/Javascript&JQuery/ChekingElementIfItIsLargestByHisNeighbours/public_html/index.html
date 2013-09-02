@@ -1,0 +1,28 @@
+<!--
+Write a function that checks if 
+the element at given position in given array 
+of integers is bigger than its two neighbors
+(when such exist).
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            var array = new Array(1, 2, 3, 44, 5, 8, 910, 22, 9);
+            var indexOfElementForCompare = 4;
+            if (array[indexOfElementForCompare] > array[indexOfElementForCompare - 1] && array[indexOfElementForCompare] > array[indexOfElementForCompare + 1])
+            {
+                console.log("Elementyt na izbraniq index e po golqm ot negovite sasedi");
+            }
+            else
+            {
+                console.log("Elementyt na izbraniq index ne e po golqm ot negovite sasedi");
+            }
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

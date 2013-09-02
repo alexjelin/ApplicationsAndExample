@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script type="text/javascript">
+            function Mammal(name, age, color, weight) {
+                var self = this;
+                self.setName = function() {
+                    if (name != null)
+                    {
+                        self.name = name;
+                    }
+                    else {
+                        throw new Error("Invalid value");
+                    }
+                }
+                self.setWeight = function() {
+                    if (weight != 0)
+                    {
+                        self.weight = weight;
+                    }
+                    else {
+                        throw new Error("Invalid value");
+                    }
+                }
+
+                self.setAge = function() {
+                    if (age != 0)
+                    {
+                        self.age = age;
+                    }
+                    else {
+                        throw new Error("Invalid value");
+                    }
+                }
+
+                self.setColor = function() {
+                    if (color != null)
+                    {
+                        self.color = color;
+                    }
+                    else {
+                        throw new Error("Invalid value");
+                    }
+                }
+
+                self.getName = function() {
+                    return self.name;
+                }
+                self.getAge = function() {
+                    return self.age;
+                }
+                self.getColor = function() {
+                    return self.color;
+                }
+                self.getWeight = function() {
+                    return self.weight;
+                }
+            }
+
+            function Person(name, age, color, weight, height) {
+                var self = this;
+                Mammal.apply(this, arguments);
+                self.height = height;
+            }
+            Person.prototype = new Mammal();
+            Person.prototype.constructor = Person();
+            // example for create object from Person;
+
+            var Maria = new Person("Maria", 15, "red", 45, 175);
+            // other way to create Objects in JS;
+            var ClassCreate = function(properties) {
+                var theClass = function() {
+                    this.init.apply(this, arguments);
+                }
+                theClass.prototype = {};
+                for (var prop in properties) {
+                    theClass.prototype[prop] = properties[prop];
+                }
+                if (!theClass.prototype.init) {
+                    theClass.prototype.init = function() {
+                    }
+                }
+                return theClass;
+            }
+
+            var Car = ClassCreate({
+                init: function(brand, model) {
+                    var self = this;
+                    self.brand = brand;
+                    self.model = model;
+                },
+                getBrand: function() {
+                    return self.brand;
+                },
+                getModel: function() {
+                    return self.model;
+                },
+                printData: function() {
+                    console.log(self.brand + " " + self.model);
+                }
+            });
+
+            var mercedes = ClassCreate({
+                init: function(brand, model, color) {
+                    Car.apply(this, arguments);
+                    this.color = color;
+                },
+                getColor: function() {
+                    return this.color;
+                }
+            });
+
+            Function.prototype.inherit = function(parent) {
+                var oldPrototype = this.prototype;
+                var prototype = new parent();
+                this.prototype = Object.create(prototype);
+                this.prototype._super = prototype;
+                for (var prop in oldPrototype) {
+                    this.prototype[prop] = oldPrototype[prop];
+                }
+            }
+
+            mercedes.inherit(Car);
+// function if no support in JS in current brouser ;
+            if (!Object.create) {
+                Object.create = function(obj) {
+                    function f() {
+                    }
+                    ;
+                    f.prototype = obj;
+                    return new f();
+                }
+            }
+
+            // Protype way to create Object by Object;
+
+            var reno = Object.create(Car);
+            Car.init("Reno", "Clio");
+            var trabant = Object.create(Car);
+            Car.init("Trabant", "Trabant");
+            console.log(reno.getBrand());
+
+        </script>
+    </body>
+</html>

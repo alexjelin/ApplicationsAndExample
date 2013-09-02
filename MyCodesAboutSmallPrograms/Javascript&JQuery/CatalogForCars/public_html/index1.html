@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Catalog for Cars-here you look save your model and his specificies!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #background
+            {
+                width:100%;
+                height: 420px;
+                background: rgb(176,212,227); /* Old browsers */
+                background: -moz-radial-gradient(center, ellipse cover,  rgba(176,212,227,1) 0%, rgba(136,186,207,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(176,212,227,1)), color-stop(100%,rgba(136,186,207,1))); /* Chrome,Safari4+ */
+                background: -webkit-radial-gradient(center, ellipse cover,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-radial-gradient(center, ellipse cover,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* Opera 12+ */
+                background: -ms-radial-gradient(center, ellipse cover,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* IE10+ */
+                background: radial-gradient(ellipse at center,  rgba(176,212,227,1) 0%,rgba(136,186,207,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0d4e3', endColorstr='#88bacf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+            }
+            article
+            {
+                border: 1px solid #333333;
+                width: 439px;
+                height: 320px;
+                border-radius: 15px;
+                position: relative;
+                right: -14px;
+                top:36px;background: rgb(240,249,255); /* Old browsers */
+                background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,249,255,1)), color-stop(47%,rgba(203,235,255,1)), color-stop(100%,rgba(161,219,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+            }
+
+            .label1
+            {
+                position: relative;
+                top:30px;
+                right:-17px;
+            }
+            .label2
+            {
+                position: relative;
+                top:41px;
+                right:-17px;
+            }
+            .label3
+            {
+                position: relative;
+                top:52px;
+                right:-17px; 
+            }
+            .label4
+            {
+                position: relative;
+                top:63px;
+                right:-17px;
+            }
+            .label5
+            {
+                position: relative;
+                top:74px;
+                right:-17px;
+            }
+            .label6
+            {
+                position: relative;
+                top:85px;
+                right:-17px; 
+            }
+            #markaKola{
+                position: absolute;
+                top:49px;
+                right:140px;             
+            }
+            #model
+            {
+                position: absolute;
+                top:80px;
+                right:166px; 
+            }
+            #godinaNaProizvodstvo
+            {
+                position: absolute;
+                top:111px;
+                right:186px; 
+            }
+            #obemDvigatel
+            {
+
+                position: absolute;
+                top:141px;
+                right:89px; 
+            }
+            #maxSkorost
+            {
+
+                position: absolute;
+                top:174px;
+                right:89px; 
+            }
+            #broiVrati
+            {
+
+                position: absolute;
+                top:205px;
+                right:196px; 
+            }
+            #description1
+            {
+                position: relative;
+                top:15px;
+                right:-18px; 
+            }
+            #saveCar
+            {
+                position:absolute;
+                top:245px;
+                right:320px; 
+                height: 52px;
+                width: 90px;
+            }
+            #saveCar:hover{
+                background: rgb(254,252,234); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+            #saveCar:active
+            {
+                background: rgb(252,234,187); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+            #clear
+            {
+                position:absolute;
+                top:245px;
+                right:155px; 
+                height: 52px;
+                width: 110px;
+            }
+            #clear:hover
+            {
+                background: rgb(254,252,234); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;}
+            #clear:active
+            {
+                background: rgb(252,234,187); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+            #exit
+            {
+                position:absolute;
+                top:245px;
+                right:20px; 
+                height: 52px;
+                width: 90px;
+            }
+            #exit:hover{
+                background: rgb(254,252,234); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+            #exit:active
+            {
+                background: rgb(252,234,187); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+
+            #searchPanel
+            {
+                border: 1px solid #333333;
+                width: 449px;
+                height: 320px;
+                border-radius: 15px;
+                position: relative;
+                right: -465px;
+                top:-286px;
+                background: rgb(240,249,255); /* Old browsers */
+                background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,249,255,1)), color-stop(47%,rgba(203,235,255,1)), color-stop(100%,rgba(161,219,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+            }
+            #descriptionForSearchPanel{
+                position:relative;
+                top:5px;
+                right: -18px; 
+                height:36.5px;
+            }
+            .label1ForSearchPanel
+            {
+                position: relative;
+                top:15px;
+                right:-17px;
+            }
+            #markaKolaSearchPanel
+            {
+                position: absolute;
+                top:51px;
+                right:140px;    
+            }
+            .label2SearchPanel
+            {
+                position: relative;
+                top:23px;
+                right:-17px;
+            }
+            #modelSeatchPanel
+            {
+                position: absolute;
+                top:80px;
+                right:166px;    
+            }
+            .label3SearchPanel
+            {
+                position: relative;
+                top:31px;
+                right:-109px;
+            }
+            #otGodinaNaProizvodstvo
+            {
+                position: relative;
+                top:35px;
+                right:-19px;
+            }
+            #doGodinaNaProizvodstvo
+            {
+                position: relative;
+                top:35px;
+                right: -120px;           
+            }
+            .label4SearchPanel
+            {
+                position: relative;
+                top:35px;
+                right:-181px;
+            }
+            #oTObemDvigatel
+            {
+                position: relative;
+                top:35px;
+                right:-19px;   
+            }
+            #dOObemDvigatel
+            {
+                position: relative;
+                top:35px;
+                right: -120px;      
+            }
+            .label5SearchPanel
+            {
+                position: relative;
+                top:35px;
+                right:-132px; 
+            }
+            #oTmaxSpeed
+            {
+                position: relative;
+                top:35px;
+                right: -19px;  
+            }
+            #dOmaxSpeed
+            {
+                position: relative;
+                top:35px;
+                right:-120px; 
+            }
+            .label6SearchPanel
+            {
+                position: relative;
+                top:43px;
+                right:-17px;
+            }
+            #broiVratiSearchPanel
+            {
+                position: absolute;
+                top:256px;
+                right:280px;    
+            }
+            #buttonSearch
+            {
+                position: absolute;
+                top:262px;
+                right:50px;    
+                height: 45px;
+                width: 90px;
+
+            }
+            #buttonSearch:hover
+            {
+                background: rgb(254,252,234); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(241,218,54,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(241,218,54,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(241,218,54,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
+                border:3px solid  skyblue;
+            }
+            #buttonSearch:active
+            {
+                background: rgb(252,234,187); /* Old browsers */
+                background: -moz-linear-gradient(top,  rgba(252,234,187,1) 0%, rgba(252,205,77,1) 50%, rgba(248,181,0,1) 51%, rgba(251,223,147,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,234,187,1)), color-stop(50%,rgba(252,205,77,1)), color-stop(51%,rgba(248,181,0,1)), color-stop(100%,rgba(251,223,147,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(252,234,187,1) 0%,rgba(252,205,77,1) 50%,rgba(248,181,0,1) 51%,rgba(251,223,147,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=0 ); /* IE6-9 */
+                border:3px solid skyblue;
+            }
+            #resultArea
+            {
+                border: 1px solid #333333;
+                width: 365px;
+                height: 320px;
+                border-radius: 5px;
+                position: relative;
+                right: -475px;
+                top:-250px;
+                position:relative;
+                top:-612px;
+                left:929px;
+                border-width:2px;	
+                border-style: groove;
+                resize: none;
+                background: rgb(240,249,255); /* Old browsers */
+                background: -moz-linear-gradient(top, rgba(240,249,255,1) 0%, rgba(203,235,255,1) 47%, rgba(161,219,255,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,249,255,1)), color-stop(47%,rgba(203,235,255,1)), color-stop(100%,rgba(161,219,255,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom, rgba(240,249,255,1) 0%,rgba(203,235,255,1) 47%,rgba(161,219,255,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 ); /* IE6-9 */
+            }
+            #titleOfProgram
+            {
+                position: relative;
+                top:18.5px;
+                text-align: center;
+                border-color: #333333;
+                text-shadow: 29px;
+                font-size: 18px;
+                font-style: italic;
+            }
+            #titleOfProgram
+            {
+                font-family: "Verdana" ;
+            }
+        </style>    
+    </head>
+    <body>
+        <div id="background">
+            <div id="titleOfProgram"><strong>ИНФОРМАЦИОННА СИСТЕМА ЗА ЗАПАЗВАНЕ И ТЪРСЕНЕ НА КОЛИ</strong></div>
+            <section>
+                <article class="panelForSaveInfo">
+
+                    <div id="description1">Въведете в базата данни параметрите на вашета кола <b>тук:</b></div>
+                    <form action="index.php" method="post" name="Form1" onsubmit="validateForm()">
+
+                        <div class="label1" >Марка на автомобил:</div> 
+                        <select id="markaKola" onchange="removeM()" name="markaKola">
+                            <option  class="marka" value="wolkswagen">Wolkswagen</option>
+                            <option class="marka" value="mercedes">Mercedes</option>
+                            <option class="marka" value="opel">Opel</option>
+                            <option class="marka" value="audi">Audi</option>
+                            <option class="marka" value="bmw">BMW</option>
+                        </select>
+                        <div class="label2" >Модел на колата:</div> 
+                        <select id="model" name="model">
+                            <option value="s8">S8</option>
+                            <option value="r8">R8</option>
+                            <option value="750">750</option>
+                            <option value="insignia">Insignia</option>
+                            <option value="cadet">Cadet</option>
+                            <option value="cls">CLS</option>
+                            <option value="a160">A160</option>
+                            <option value="a140">A140</option>
+                            <option value="m3">M3</option>
+                            <option value="phaeton">Phaeton</option>
+                        </select>
+                        <div class="label3" >Година на пройзводство:</div> 
+                        <select id="godinaNaProizvodstvo" name="godina">
+                            <option>2013</option>
+                            <option>2012</option>
+                            <option>2011</option>
+                            <option>2010</option>
+                            <option>2009</option>
+                            <option>2008</option>
+                            <option>2007</option>
+                            <option>2006</option>
+                            <option>2005</option>
+                            <option>2004</option>
+                            <option>2003</option>
+                            <option>2002</option>
+                            <option>2001</option>
+                            <option>2000</option>
+                            <option>1999</option>
+                            <option>1998</option>
+                            <option>1997</option>
+                            <option>1996</option>
+                            <option>1995</option>
+                            <option>1994</option>
+                            <option>1993</option>
+                            <option>1992</option>
+                            <option>1991</option>
+                            <option>1990</option>
+                            <option>1989</option>
+                        </select>
+                        <div class="label4" >Обем:</div> 
+                        <input type="text" name="obemKola" value="" id="obemDvigatel" onchange="validationObem()"/>
+
+                        <div class="label5" >Максимална скорост:</div>  
+                        <input type="text" value="" id="maxSkorost" name="maxSpeed" onchange="validationMaxSpeed()"/>
+
+                        <div class="label6" >Брои врати:</div> 
+                        <select id="broiVrati" name="broiVratiKola">
+                            <option value="2/3" >23</option>
+                            <option value="4/5">45</option>                 
+                        </select>
+                    </form>
+                    <input type="submit" value="Save" id="saveCar" onclick="setValue()"/>
+                    <input type="reset" value="Clear all Values" id="clear"/>
+                    <input type="button" value="Exit" id="exit"/>
+                </article>
+            </section>
+            <aside id="searchPanel">
+                <section>
+                    <div id="descriptionForSearchPanel">Моля въведете критерии за търсене в информационната
+                        ни система за кола <strong>тук:</strong></div>
+                    <form action="index2.php" method="POST" name>
+                        <div class="label1ForSearchPanel" >Марка на автомобил:</div> 
+                        <select id="markaKolaSearchPanel" name="markaKolaSearchPanel" onchange="removeMSearchPanel()">
+                            <option value="wolkswagen" selected="selected">Wolkswagen</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                            <option value="bmw">BMW</option>
+                        </select>
+                        <div class="label2SearchPanel" >Модел на колата:</div> 
+                        <select id="modelSeatchPanel" name="modelSeatchPanel">
+                            <option value="s8">S8</option>
+                            <option value="r8">R8</option>
+                            <option value="750">750</option>
+                            <option value="insignia">Insignia</option>
+                            <option value="cadet">Cadet</option>
+                            <option value="cls">CLS</option>
+                            <option value="a160">A160</option>
+                            <option value="a140">A140</option>
+                            <option value="m3">M3</option>
+                            <option value="phaeton">Phaeton</option>
+                        </select>
+                        <div class="label3SearchPanel" >Година на пройзводство(от - до):</div> 
+                        <input type="text" id="otGodinaNaProizvodstvo" name="otGodinaNaProizvodstvo" value=""/>
+                        <input type="text" id="doGodinaNaProizvodstvo" name="doGodinaNaProizvodstvo" value=""/>
+                        <div class="label4SearchPanel" >Обем(от - до):</div> 
+                        <input type="text" value="" id="oTObemDvigatel" name="oTObemDvigatel"/>
+                        <input type="text" value="" id="dOObemDvigatel" name="dOObemDvigatel"/>
+
+                        <div class="label5SearchPanel" >Максимална скорост(от - до):</div>  
+                        <input type="text" value="" id="oTmaxSpeed" name="oTmaxSpeed"/>
+                        <input type="text" value="" id="dOmaxSpeed" name="dOmaxSpeed"/>
+
+                        <div class="label6SearchPanel" >Брои врати:</div> 
+                        <select id="broiVratiSearchPanel" name="broiVratiSearchPanel">
+                            <option value="2/3" selected="selected">2/3</option>
+                            <option value="4/5">4/5</option>                 
+                        </select>
+                        <input type="button" value="Търси" id="buttonSearch" onclick="setValue2()"/>  
+                    </form>
+                </section>
+            </aside>
+            <aside>
+                <textarea id="resultArea" readonly="readonly">
+
+                </textarea>
+            </aside>
+            <script type="text/javascript">
+                        var marka = document.getElementById("markaKola");
+                        var model = document.getElementById("model");
+                        function removeM() {
+                            var marka = document.getElementById("markaKola");
+                            var selectedText = marka.options[marka.selectedIndex].text;
+                            if (selectedText == "BMW") {
+                                document.getElementById("model").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "750";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "M3";
+                                document.getElementById("model").innerHTML = "";
+                                document.getElementById("model").add(opt);
+                                document.getElementById("model").add(opt1);
+                            }
+                            else if (selectedText == "Opel") {
+                                document.getElementById("model").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = " Insignia";
+                                document.getElementById("model").innerHTML = "";
+                                document.getElementById("model").add(opt);
+                            }
+                            else if (selectedText == "Mercedes") {
+                                document.getElementById("model").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "CLS";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "A160";
+                                var opt2 = document.createElement("option");
+                                opt2.textContent = "A140";
+                                document.getElementById("model").innerHTML = "";
+                                document.getElementById("model").add(opt);
+                                document.getElementById("model").add(opt1);
+                                document.getElementById("model").add(opt2);
+                            }
+                            else if (selectedText == "Audi") {
+                                document.getElementById("model").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "S8";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "R8";
+                                document.getElementById("model").innerHTML = "";
+                                document.getElementById("model").add(opt);
+                                document.getElementById("model").add(opt1);
+                            }
+                            else if (selectedText == "Wolkswagen") {
+                                document.getElementById("model").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                document.getElementById("model").innerHTML = "";
+                                opt.textContent = "Phaeton";
+                                document.getElementById("model").add(opt);
+                            }
+                            else if (selectedText == "")
+                            {
+                                removeM();
+                            }
+                        }
+
+                        function removeMSearchPanel() {
+                            var marka = document.getElementById("markaKolaSearchPanel");
+                            var selectedText = marka.options[marka.selectedIndex].text;
+                            if (selectedText == "BMW") {
+                                document.getElementById("modelSeatchPanel").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "750";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "M3";
+                                document.getElementById("modelSeatchPanel").innerHTML = "";
+                                document.getElementById("modelSeatchPanel").add(opt);
+                                document.getElementById("modelSeatchPanel").add(opt1);
+                            }
+                            else if (selectedText == "Opel") {
+                                document.getElementById("modelSeatchPanel").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = " Insignia";
+                                document.getElementById("modelSeatchPanel").innerHTML = "";
+                                document.getElementById("modelSeatchPanel").add(opt);
+                            }
+                            else if (selectedText == "Mercedes") {
+                                document.getElementById("modelSeatchPanel").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "CLS";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "A160";
+                                var opt2 = document.createElement("option");
+                                opt2.textContent = "A140";
+                                document.getElementById("modelSeatchPanel").innerHTML = "";
+                                document.getElementById("modelSeatchPanel").add(opt);
+                                document.getElementById("modelSeatchPanel").add(opt1);
+                                document.getElementById("modelSeatchPanel").add(opt2);
+                            }
+                            else if (selectedText == "Audi") {
+                                document.getElementById("modelSeatchPanel").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                opt.textContent = "S8";
+                                var opt1 = document.createElement("option");
+                                opt1.textContent = "R8";
+                                document.getElementById("modelSeatchPanel").innerHTML = "";
+                                document.getElementById("modelSeatchPanel").add(opt);
+                                document.getElementById("modelSeatchPanel").add(opt1);
+                            }
+                            else if (selectedText == "Wolkswagen") {
+                                document.getElementById("modelSeatchPanel").selectedIndex = -1;
+                                var opt = document.createElement("option");
+                                document.getElementById("modelSeatchPanel").innerHTML = "";
+                                opt.textContent = "Phaeton";
+                                document.getElementById("modelSeatchPanel").add(opt);
+                            }
+                            else if (selectedText == "")
+                            {
+                                removeM();
+                            }
+                        }
+
+                        var marka = document.getElementById("markaKola").value;
+                        var model = document.getElementById('model').value;
+                        var godina = document.getElementById("godinaNaProizvodstvo").value;
+                        var obem = document.getElementById("obemDvigatel").value;
+                        var maxSpeed = document.getElementById("maxSkorost").value;
+                        var broiVrati = document.getElementById("broiVrati").value;
+
+                        function validationObem() {
+                            var obem = document.getElementById("obemDvigatel").value;
+                            if (obem < 0 ^ (typeof obem == 'string'))
+                            {
+                                while (obem < 0)
+                                {
+                                    obem = prompt("Моля въведете коректни данни за обема на двигателя в цифри:");
+                                }
+                            }
+                        }
+
+                        function validationMaxSpeed() {
+                            var maxSpeed = document.getElementById("maxSkorost").value;
+                            if (maxSpeed < 0 ^ !(typeof obem == 'string'))
+                            {
+                                while (maxSpeed < 0)
+                                {
+                                    maxSpeed = prompt("Моля въведете коректни данни за максималната скорост на двигателя в цифри:");
+                                }
+                            }
+                        }
+                        function Car(marka, model, godina, obem, maxSkorost, broiVrati) {
+                            var self = this;
+                            self.marka = marka;
+                            self.model = model;
+                            self.godina = godina;
+                            self.obem = obem;
+                            self.maxSkorost = maxSpeed;
+                            self.broiVrati = broiVrati;
+                            toString:function printInfo() {
+                                return "Marka: " + marka + "Model " + model + "Godina na proizvodstvo: " + "Obem: " + obem + "Maksimalna Skorost: " + "Broi vrati : " + BroiVrati;
+                            }
+                            ;
+                        }
+
+                        function attachEventHandler(element, eventType, eventHandler) {
+                            if (document.attachEvent) {
+                                element.attachEvent("on" + eventType, eventHandler);
+                            }
+                            else if (document.addEventListener) {
+                                element.addEventListener(eventType, eventHandler, false);
+                            }
+                            else {
+                                element["on" + eventType] = eventHandler;
+                            }
+                        }
+
+                        var buttonSave = document.getElementById("saveCar");
+                        var buttonClear = document.getElementById("clear");
+                        var buttonExit = document.getElementById("exit");
+                        var buttonSearch = document.getElementById("buttonSearch");
+                        attachEventHandler(buttonExit, "click", exit);
+                        attachEventHandler(buttonClear, "click", clearFields);
+                        attachEventHandler(buttonSave, "click", saveData);
+                        attachEventHandler(buttonSearch, "click", search);
+
+                        function setValue() {
+                            document.forms["Form1"].submit();
+                            document.getElementById("resultArea").value.innerHTML = "Uspeshno prehvarlqne na dannite!";
+                        }
+                        function setValue2() {
+                            document.forms["Form2"].submit();
+                            document.getElementById("resultArea").value.innerHTML = "Uspeshno prehvarlqne na dannite!";
+                        }
+                        function validateForm()
+                        {
+                            if (true)
+                            {
+                                console.log("true");
+                            }
+                            else {
+                                console.log("false");
+                            }
+                        }
+
+
+                        function submitform()
+                        {
+                            if (document.myform.onsubmit &&
+                                    !document.myform.onsubmit())
+                            {
+                                return;
+                            }
+                            document.myform.submit();
+                        }
+
+                        function exit()
+                        {
+                            var exit = confirm("Искате ли да се затвори програмата?");
+                            console.log("stana");
+                            if (exit)
+                            {
+                                window.open('', '_self', '');
+                                window.close();
+                            }
+                            else {
+                            }
+                        }
+                        function clearFields()
+                        {
+                            document.getElementById("markaKola").selectedIndex = -1;
+                            document.getElementById("model").selectedIndex = -1;
+                            document.getElementById("godinaNaProizvodstvo").selectedIndex = -1;
+                            document.getElementById('obemDvigatel').value = "";
+                            document.getElementById('maxSkorost').value = "";
+                            document.getElementById("broiVrati").selectedIndex = -1;
+                        }
+
+            </script>
+        </div>
+    </body>
+</html>

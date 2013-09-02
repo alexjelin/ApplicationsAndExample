@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+function changeStyle()
+{
+    var ul=document.getElementById("id");
+    var item=document.getElementsByClassName("item");
+    var item2=document.getElementsByClassName("item2");
+    var item3=document.getElementsByClassName("item3");
+    item.style.color="black";
+    item.style.background="green";
+    item.style.fontSize="19px";
+    item2.style.color="green";
+    item2.style.border="blue";
+    item2.style.fontFamily="Tahoma";
+    item3.style.color="red";
+    item3.style.border="green";
+    item3.style.fontFamily="Arial";       
+}
+        </script>
+    </head>
+    <body>
+        <ul id="ul">
+            <li class="item">Item 1</li>
+            <li class="item">Item 1</li>
+            <li class="item">Item 1</li>
+            <li class="item2">Item 2</li>
+            <li class="item2">Item 2</li>
+            <li class="item2">Item 2</li>
+            <li class="item2">Item 2</li>
+            <li class="item3">Item 3</li>
+            <li class="item3">Item 3</li>
+            <li class="item3">Item 3</li>
+            <li class="item3">Item 3</li>
+        </ul>
+        <input type="button" value="Click me!" onclick="changeStyle()"/>
+    </body>
+</html>

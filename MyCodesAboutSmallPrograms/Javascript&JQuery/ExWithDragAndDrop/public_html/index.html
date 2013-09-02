@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #drag
+            {
+                height:100px;
+                width: 50px;
+                border:2px solid red;
+                background: blue;
+                font-size: 20px;
+            }
+
+            #div
+            {
+                height:250px;
+                width: 120px;
+                border:1px solid black;
+                background: white;
+                font-size: 15px;
+                position: relative;
+                left:250px;
+            }
+
+        </style>
+        <script>
+            //metod razrishavasht priemaneneto na dragvan element
+            function allowDroping(ev)
+            {
+                ev.preventDefault();
+            }
+           // metod koito pozvolqva dragvaneto na div-a
+            function drag(ev)
+            {
+                ev.dataTransfer.setData("Text", ev.target.id);
+            }
+
+            function dropInside(ev)
+            {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("Text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="drag" draggable="true" 
+             ondragstart="drag(event)" >Some text</div>
+        <div id="div" ondrop="dropInside(event)"
+             ondragover="allowDroping(event)">Other Text</div>
+    </body>
+</html>
