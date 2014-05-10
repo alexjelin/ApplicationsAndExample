@@ -1,0 +1,103 @@
+<DOCTYPE!>
+<html>
+    <head>
+    <style>
+    #contatcForm
+    {
+        background: #d6f9ff; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #d6f9ff 0%, #9ee8fa 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#d6f9ff), color-stop(100%,#9ee8fa)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #d6f9ff 0%,#9ee8fa 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #d6f9ff 0%,#9ee8fa 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #d6f9ff 0%,#9ee8fa 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #d6f9ff 0%,#9ee8fa 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', endColorstr='#9ee8fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        width:400px;
+        height:450px;
+        position:relative;
+        top:10px;
+        left:480px;
+        border: 3px solid white;
+        border-radius: 15px;
+    }
+    .textfields{
+        width:235px;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    #btn{
+        position:relative;
+        top:29px;
+        background: #9dd53a; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #9dd53a 0%, #a1d54f 50%, #80c217 51%, #7cbc0a 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#9dd53a), color-stop(50%,#a1d54f), color-stop(51%,#80c217), color-stop(100%,#7cbc0a)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #9dd53a 0%,#a1d54f 50%,#80c217 51%,#7cbc0a 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9dd53a', endColorstr='#7cbc0a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        width:240px;
+        height:50px;
+        border: 3px solid white;
+        border-radius:25px;
+        font-weight: bold;
+    }
+    #btn:hover{
+        position:relative;
+        top:29px;
+        background: #e6f0a3; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #e6f0a3 0%, #d2e638 50%, #c3d825 51%, #dbf043 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#e6f0a3), color-stop(50%,#d2e638), color-stop(51%,#c3d825), color-stop(100%,#dbf043)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #e6f0a3 0%,#d2e638 50%,#c3d825 51%,#dbf043 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6f0a3', endColorstr='#dbf043',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        width:246px;
+        height:53px;
+        border: 3px solid white;
+        border-radius:25px;
+        font-weight: bold;
+    }
+    </style>
+        <title>Контактна форма</title>
+        <meta charset="windows-1251" />
+    </head>
+    <body>
+        <form method="get" id="contatcForm" action="index.php">
+           <b>
+                <center>
+                    <div>Контактна форма</div>
+                </center>
+            </b>
+           <br />
+           <center>
+                 <b>
+                    <div>Моля въведете първото си име:</div>
+                 </b>
+                  <br />
+                <input class="textfields" type="text" name="fname"/>
+            </center>
+             <br />
+            <center>
+                 <b><div>Моля въведете второт си име:</div></b>
+                  <br />
+                <input class="textfields" type="text" name="lname"/>
+            </center>
+            <center>
+             <br />
+                <b> <div>Моля въведете телефон:</div></b>
+                 <br />
+                <input class="textfields" type="text" name="telefon"/>
+            </center>
+            <center>
+             <br />
+                <b> <div>Моля въведете емайл:</div></b> <br />
+                <input class="textfields" type="text" name="email"/>
+                 <br />
+            </center>
+            <center><input id="btn" value="Изпращане" name="reg" type="submit"/></center>
+        </form>
+    </body>
+</html>
+</DOCTYPE>
