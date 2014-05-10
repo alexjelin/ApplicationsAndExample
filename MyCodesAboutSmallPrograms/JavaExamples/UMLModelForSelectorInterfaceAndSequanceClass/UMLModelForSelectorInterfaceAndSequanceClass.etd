@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE XMI SYSTEM "C:\Users\Jelin\AppData\Roaming\NetBeans\7.3\.uml\config\UML_2.0EMBT.dtd"> --><XMI xmlns:UML="omg.org/UML/1.4" xmi.version="2.0"> <XMI.header> <XMI.metamodel xmi.name="UML" xmi.version="1.4"/> <XMI.documentation> <XMI.exporter> Embarcadero's Describe </XMI.exporter> <XMI.exporterVersion> 6.0 </XMI.exporterVersion> </XMI.documentation> </XMI.header> <XMI.content> <UML:Project xmi.id="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718" mode="Design" defaultLanguage="UML" projVersion="6.1.4.837" name="UMLModelForSelectorInterfaceAndSequanceClass"><UML:Element.ownedElement>
+<UML:Activity xmi.id="DCE.D8BF5488-878D-0B97-5F31-8D7F0099C6E3" name="Activity Diagram 1" owner="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718"/>
+<UML:Class xmi.id="DCE.BB1BFA61-ADD1-DAF4-F7B0-F853800DED0B" name="Sequance" owner="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718" clientDependency="DCE.77D6C427-B1BD-878A-E720-8F6986E5C955"><UML:Element.presentation>
+</UML:Element.presentation><UML:Element.ownedElement>
+<UML:Class xmi.id="DCE.A40998E1-C9BD-EC5E-158A-919F0B108F12" name="SSelector" owner="DCE.BB1BFA61-ADD1-DAF4-F7B0-F853800DED0B"><UML:Element.presentation>
+</UML:Element.presentation></UML:Class>
+<UML:Class xmi.id="DCE.78B920EF-7F33-822A-7179-E30A7F8C4A9B" name="RSelector" owner="DCE.BB1BFA61-ADD1-DAF4-F7B0-F853800DED0B"><UML:Element.presentation>
+</UML:Element.presentation></UML:Class></UML:Element.ownedElement></UML:Class>
+<UML:Interface xmi.id="DCE.DE0B2869-1E86-077F-0F51-7B0F5B885CDB" name="Selector" isAbstract="true" owner="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718" appliedStereotype="__uri_.\UMLModelForSelectorInterfaceAndSequanceClass.etup#//*[@xmi.id=&quot;DCE.A9DE49EF-C6B4-26A9-A4A8-66640E47DF98&quot;]" supplierDependency="DCE.77D6C427-B1BD-878A-E720-8F6986E5C955"><UML:Element.presentation>
+</UML:Element.presentation><UML:Element.ownedElement>
+<UML:Class xmi.id="DCE.C95F7706-37B2-6012-0E74-410C622428C8" name="Unnamed" owner="DCE.DE0B2869-1E86-077F-0F51-7B0F5B885CDB"><UML:Element.presentation>
+</UML:Element.presentation></UML:Class></UML:Element.ownedElement></UML:Interface>
+<UML:Implementation xmi.id="DCE.77D6C427-B1BD-878A-E720-8F6986E5C955" owner="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718" client="DCE.BB1BFA61-ADD1-DAF4-F7B0-F853800DED0B" supplier="DCE.DE0B2869-1E86-077F-0F51-7B0F5B885CDB"><UML:Element.presentation>
+</UML:Element.presentation></UML:Implementation>
+
+
+</UML:Element.ownedElement><UML:Package.packageImport>
+<UML:PackageImport xmi.id="DCE.0C559601-C864-6865-0388-3A16152EAEBF" importingPackage="DCE.E0B8135C-6FF3-BA10-720C-A4D834581718"><UML:PackageImport.importedPackage>
+<UML:Profile xmi.id="DCE.AC3AC644-A0E2-28A3-C055-CE4E760DFC07" name="Unnamed" isCloned="true" href=".\UMLModelForSelectorInterfaceAndSequanceClass.etup#//*[@xmi.id=&apos;DCE.AC3AC644-A0E2-28A3-C055-CE4E760DFC07&apos;]" isDirty="false"/></UML:PackageImport.importedPackage><UML:Element.ownedElement>
+<UML:TaggedValue xmi.id="DCE.895F34B0-9A7E-88F8-14FE-85F4A86CE4EE" owner="DCE.0C559601-C864-6865-0388-3A16152EAEBF" name="autoCreated">
+<UML:TaggedValue.dataValue>true</UML:TaggedValue.dataValue></UML:TaggedValue></UML:Element.ownedElement></UML:PackageImport></UML:Package.packageImport></UML:Project></XMI.content> </XMI>
